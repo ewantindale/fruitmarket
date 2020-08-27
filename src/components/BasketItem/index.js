@@ -20,7 +20,6 @@ export default function BasketItem({ item }) {
         </div>
       </div>
       <div className={styles.buttons}>
-        <button>Update</button>
         <button onClick={handleRemoveItemClicked}>Remove</button>
       </div>
     </div>
