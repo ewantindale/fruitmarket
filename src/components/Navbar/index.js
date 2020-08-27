@@ -7,6 +7,7 @@ import {
   selectNumberOfItems,
   selectBasketSubTotal,
 } from "../../redux/basketSlice";
+import { GiShinyApple } from "react-icons/gi";
 
 export default function Navbar() {
   const numberOfItems = useSelector(selectNumberOfItems);
@@ -14,7 +15,10 @@ export default function Navbar() {
 
   return (
     <div className={styles.container}>
-      <span className={styles.title}>FruitMarket</span>
+      <span className={styles.title}>
+        <GiShinyApple />
+        FruitMarket
+      </span>
       <Link to="/checkout" className={styles.checkoutButton}>
         <FaShoppingCart size={25} /> {numberOfItems} Items | £
         {subTotal.toFixed(2)}
