@@ -3,6 +3,35 @@
   min-height: 100vh;
 }
 
+.badges {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
+  justify-content: space-evenly;
+  padding: 0 8%;
+  margin: 5rem 0;
+
+  .badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s ease;
+    svg {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
 .productList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Product from "../../components/Product";
 import Masthead from "../../components/Masthead";
+import { FiTruck } from "react-icons/fi";
+import { GiShinyApple, GiThreeLeaves } from "react-icons/gi";
 
 const products = [
   {
@@ -46,6 +48,20 @@ export default function Products() {
   return (
     <div className={styles.container}>
       <Masthead />
+      <div className={styles.badges}>
+        <div className={styles.badge}>
+          <GiShinyApple />
+          <p>Fresh, high quality produce</p>
+        </div>
+        <div className={styles.badge}>
+          <GiThreeLeaves />
+          <p>100% Organic</p>
+        </div>
+        <div className={styles.badge}>
+          <FiTruck />
+          <p>Free Delivery over £20</p>
+        </div>
+      </div>
       <div className={styles.productList}>
         {products.map((product) => (
           <Product product={product} key={product.id} />
