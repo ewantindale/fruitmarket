@@ -1,0 +1,37 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgrey;
+
+  .info {
+    text-align: center;
+    padding: 1rem;
+
+    h2 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 1rem 0 0 0;
+    }
+
+    button {
+      margin-top: 1rem;
+      border: 1px solid black;
+      background: none;
+      padding: 1rem 2rem;
+      transition: 0.25s ease;
+      text-transform: uppercase;
+      &:hover {
+        color: white;
+        background: black;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

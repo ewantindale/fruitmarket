@@ -1,0 +1,12 @@
+.container {
+  margin-top: 60px;
+  min-height: 100vh;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  padding: 1rem 8%;
+}

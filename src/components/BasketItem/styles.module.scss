@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: 1px solid black;
+    background: none;
+    padding: 1rem 2rem;
+    transition: 0.25s ease;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}

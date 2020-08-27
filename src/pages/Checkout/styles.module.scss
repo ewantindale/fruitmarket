@@ -1,0 +1,17 @@
+.container {
+  margin-top: 60px;
+  padding: 1rem 8%;
+  min-height: 100vh;
+
+  .backButton {
+    border: 1px solid black;
+    background: none;
+    padding: 1rem 2rem;
+    transition: 0.25s ease;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}
