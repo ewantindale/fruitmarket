@@ -59,7 +59,7 @@ export default function Products() {
         </div>
         <div className={styles.badge}>
           <FiTruck />
-          <p>Free Delivery over £20</p>
+          <p>Free Delivery when you spend £20</p>
         </div>
       </div>
       <div className={styles.productList}>
