@@ -1,14 +1,23 @@
+@import "../../variables";
+
 .product {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid lightgrey;
+  //border: 1px solid lightgrey;
   transition: 0.25s ease;
-  &:hover {
-    transform: scale(1.05);
+
+  background: $dark;
+
+  img {
+    width: 100%;
+    opacity: 0.5;
+    transition: 0.25s ease;
   }
   .info {
+    opacity: 0.5;
+    color: $light;
     text-align: center;
     padding: 1rem;
 
@@ -22,19 +31,21 @@
 
     button {
       margin-top: 1rem;
-      border: 1px solid black;
-      background: none;
+      background: $light;
+      border: none;
+      color: $dark;
       padding: 1rem 2rem;
       transition: 0.25s ease;
       text-transform: uppercase;
       &:hover {
-        color: white;
-        background: black;
+        background: darken($light, 20);
       }
     }
   }
-
-  img {
-    width: 100%;
+  &:hover {
+    img,
+    .info {
+      opacity: 1;
+    }
   }
 }

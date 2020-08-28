@@ -1,9 +1,12 @@
+@import "../../variables";
+
 .container {
   margin-top: 60px;
   min-height: 100vh;
 }
 
 .badges {
+  color: $light;
   display: flex;
   flex-direction: column;
   @media (min-width: 900px) {

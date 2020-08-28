@@ -24,14 +24,32 @@ export default function CheckoutPage() {
       </div>
       {items.length > 0 ? (
         <div className={styles.totals}>
-          <div>Subtotal: {"£" + subtotal.toFixed(2)} </div>
-          <div>Delivery: {subtotal < 20 ? "£" + (5).toFixed(2) : "FREE"} </div>
-          <div>
-            Total:{" "}
-            {"£" +
-              (subtotal < 20 ? (subtotal + 5).toFixed(2) : subtotal.toFixed(2))}
+          <div className={styles.subtotal}>
+            <span>Subtotal: </span>
+            <span>{"£" + subtotal.toFixed(2)}</span>{" "}
+          </div>
+          <div className={styles.delivery}>
+            <span>Delivery: </span>
+            <span>{subtotal < 20 ? "£" + (5).toFixed(2) : "FREE"}</span>
+          </div>
+          <div className={styles.total}>
+            <span>Total:</span>
+            <span>
+              {"£" +
+                (subtotal < 20
+                  ? (subtotal + 5).toFixed(2)
+                  : subtotal.toFixed(2))}
+            </span>
           </div>
         </div>
+      ) : null}
+      {items.length > 0 ? (
+        <button
+          className={styles.purchaseButton}
+          onClick={() => alert("This is as far as the demo goes :)")}
+        >
+          Purchase
+        </button>
       ) : null}
     </div>
   );
